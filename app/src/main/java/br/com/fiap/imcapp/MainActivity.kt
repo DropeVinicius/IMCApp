@@ -221,6 +221,28 @@ fun IMCScreen() {
                                 fontSize = 14.sp
                             )
                         }
+                        Spacer(modifier = Modifier.height(16.dp))
+                        // Novo botão de limpar
+                        Button(
+                            onClick = {
+                                peso = ""
+                                altura = ""
+                                imc = 0.0
+                                statusImc = ""
+                            },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(48.dp),
+                            shape = RoundedCornerShape(16.dp),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color.Gray)
+                        ) {
+                            Text (
+                                text = "LIMPAR",
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White,
+                                fontSize = 14.sp
+                            )
+                        }
                     }
                 }
             }
